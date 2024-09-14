@@ -1,0 +1,103 @@
+/* General styling for the body and main section */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+    color: #333;
+}
+
+.first_ {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Chat container */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Styling for each chat message (user and API) */
+.chat-message {
+    max-width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+/* User's input is aligned to the right */
+.chat-message-user {
+    align-self: flex-end;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 20px 20px 0 20px; /* Capsule-style rounded corners */
+    padding: 10px 20px;
+    word-wrap: break-word; /* Allow long words to break onto the next line */
+}
+
+/* API response is aligned to the left */
+.chat-message-api {
+    align-self: flex-start;
+    background-color: #f1f1f1;
+    color: #333;
+    border-radius: 20px 20px 20px 0; /* Rounded corners for the API message */
+    padding: 10px 20px;
+    word-wrap: break-word;
+}
+
+/* Capsule-style input textarea */
+textarea.capsule-input {
+    width: 100%;
+    height: 40px; /* Start with a height similar to an input bar */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Rounded corners for capsule effect */
+    transition: all 0.3s ease;
+    overflow-y: hidden; /* Hide scroll bar */
+    resize: none; /* Prevent manual resizing */
+    line-height: 1.5;
+}
+
+textarea.capsule-input.auto-expand {
+    min-height: 40px;
+    max-height: 400px; /* Limit the max height */
+}
+
+textarea.capsule-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

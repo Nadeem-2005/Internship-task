@@ -1,0 +1,30 @@
+<%- include("partials/header.ejs") %>
+
+<section>
+    <% if (!locals.llmResponse) { %>
+    <section class="first_">
+        <div><h1>Hello!! How can I help you</h1></div>
+        <form action="/query" method="POST">
+            <textarea name="prompt" id="prompt" placeholder="Please enter your query" cols="100%"></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <% } else { %>
+        <div class="chat-container">
+            <div class="chat-message chat-message-user">
+                <%= user_prompt %>
+            </div>
+            <div class="chat-message chat-message-api">
+                <%- llmResponse %>
+            </div>
+
+            
+        </div>
+        <form action="/query" method="POST">
+            <textarea name="prompt" id="prompt" placeholder="Please enter your query" class="capsule-input"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    <% } %>
+</section>
+
+<%- include("partials/footer.ejs") %>
